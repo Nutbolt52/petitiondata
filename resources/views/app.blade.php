@@ -63,7 +63,7 @@
 @yield('content')
 
 <div class="text-muted text-center">
-    &copy; {{ date("Y") }} <a href="www.nutbolt.eu" target="_blank">Nutbolt Solutions</a>
+    &copy; {{ date("Y") }} <a href="http://www.nutbolt.eu" target="_blank">Nutbolt Solutions</a>
 </div>
 
 <script src="{{ URL::asset('js/jquery-1.11.3.min.js') }}"></script>
