@@ -10,9 +10,16 @@ use App\Http\Controllers\Controller;
 
 use Datatables;
 use App\Helpers\updatePetitionData;
+use App\Helpers\recentSearches;
 
 class PetitionData extends Controller
 {
+    public function home() {
+        $searches = recentSearches::get();
+
+        return view('home', ['searches' => $searches]);
+    }
+
     public function RequestData(Request $request)
     {
         $this->validate($request, [
@@ -24,7 +31,8 @@ class PetitionData extends Controller
 
     public function GetAndDisplayData($petitionID)
     {
-        $data = updatePetitionData::get($petitionID);
+        $searchcount = true;
+        $data = updatePetitionData::get($petitionID, $searchcount);
 
         if (isset($data['error'])) {
             return Redirect('/')->with('error', $data['error']);
@@ -36,7 +44,8 @@ class PetitionData extends Controller
 
     public function ConstituencyData($petitionID)
     {
-        $data = updatePetitionData::get($petitionID);
+        $searchcount = false;
+        $data = updatePetitionData::get($petitionID, $searchcount);
 
         if (isset($data['error'])) {
             return Redirect('/')->with('error', $data['error']);
@@ -54,7 +63,8 @@ class PetitionData extends Controller
 
     public function CountryData($petitionID)
     {
-        $data = updatePetitionData::get($petitionID);
+        $searchcount = false;
+        $data = updatePetitionData::get($petitionID, $searchcount);
 
         if (isset($data['error'])) {
             return Redirect('/')->with('error', $data['error']);

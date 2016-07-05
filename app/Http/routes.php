@@ -24,10 +24,7 @@
 
 Route::group(['middleware' => ['web']], function () {
     //Home page
-    Route::get('/', function () {
-        return view('home');
-    });
-
+    Route::get('/', 'PetitionData@home');
     //Petition Specific Page
     Route::post('/petition', 'PetitionData@RequestData');
     Route::get('/{petitionID}', 'PetitionData@GetAndDisplayData');
