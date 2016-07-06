@@ -1,5 +1,12 @@
 @extends('app')
 
+@section('metadata')
+    <link rel="canonical" href="https://petitiondata.uk/">
+
+    <meta name="description" content="View a summary of information on the signatures from petitions on the UK Government Petition website" />
+    <meta name="keywords" content="petition, data, petitions, uk government, open data, signature, signatures, information" />
+@endsection
+
 @section('content')
     <div class="container spark-screen">
 

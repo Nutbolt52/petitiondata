@@ -1,5 +1,12 @@
 @extends('app')
 
+@section('metadata')
+    <link rel="canonical" href="https://petitiondata.uk/{{ $id }}">
+
+    <meta name="description" content="View a summary of information on the signatures for the petition: {{ $attributes['action'] }}" />
+    <meta name="keywords" content="petition, data, petitions, uk government, open data, signature, signatures, information" />
+@endsection
+
 @section('styles')
     <link href="{{ URL::asset('vendor/datatables/dataTables.bootstrap.min.css') }}" rel="stylesheet">
 @endsection

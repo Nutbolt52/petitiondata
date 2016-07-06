@@ -82,12 +82,5 @@ class recentSearches
         } catch (\Exception $e) {
             return ['error' => 'Sorry, there was an issue with the recent searches list, please try again'];
         }
-
-
-//        SortBy every time we increment a number. Allows pop and stuff to work.
-
-        //useful example for storing multi dimension array in collection
-        //$collection = collect(['name' => 'taylor', 'languages' => ['php', 'javascript']]);
-
     }
 }

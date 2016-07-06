@@ -7,7 +7,11 @@
 
     <link rel="icon" href="{{ URL::asset('img/favicon.png') }}">
 
-    <title>{{ isset($id) ? 'Browse Data |' : '' }} UK Petition Data</title>
+    <link rel="image_src" href="img/favicon.png" />
+
+    @yield('metadata')
+
+    <title>{{ isset($id) ? 'Browse Data for '. $id . ' |' : '' }} UK Petition Data</title>
 
     <!-- Bootstrap core CSS -->
     <link href="{{ URL::asset('css/cosmo.min.css') }}" rel="stylesheet">
