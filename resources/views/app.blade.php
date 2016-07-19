@@ -58,7 +58,7 @@
             <!-- Right Side Of Navbar -->
             <ul class="nav navbar-nav navbar-right">
                 <!-- Menu Links -->
-
+                <li><a href="about">About</a></li>
             </ul>
         </div>
     </div>

@@ -25,6 +25,8 @@
 Route::group(['middleware' => ['web']], function () {
     //Home page
     Route::get('/', 'PetitionData@home');
+    //About Page
+    Route::get('/about', 'PetitionData@about');
     //Petition Specific Page
     Route::post('/petition', 'PetitionData@RequestData');
     Route::get('/{petitionID}', 'PetitionData@GetAndDisplayData');

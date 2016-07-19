@@ -20,6 +20,10 @@ class PetitionData extends Controller
         return view('home', ['searches' => $searches]);
     }
 
+    public function about() {
+        return view('about');
+    }
+
     public function RequestData(Request $request)
     {
         $this->validate($request, [
